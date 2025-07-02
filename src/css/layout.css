@@ -59,6 +59,7 @@
 .l-sticky-cta__link-text {
   font-weight: var(--font-bold);
   font-size: calc(32 / var(--layout-width-scroll) * 100vw);
+  letter-spacing: var(--tracking-normal);
   color: var(--color-white);
 }
 
@@ -529,7 +530,7 @@
   margin-block-start: calc((90 / 650) * 100%);
 }
 
-.l-pointe__text-area-image {
+.l-point__text-area-image {
   z-index: var(--default-z-index);
   position: absolute;
   inset-block-start: 0;
@@ -619,7 +620,7 @@
 /* contact */
 .l-contact {
   position: relative;
-  padding-block-start: calc(112 / var(--layout-width-scroll) * 100%);
+  margin-block-start: calc(112 / var(--layout-width-scroll) * 100%);
 }
 
 .l-contact__inner {
@@ -680,7 +681,7 @@
   transition: background 0.3s ease;
 }
 
-.l-cotant__button-link-text {
+.l-contact__button-link-text {
   z-index: var(--front-z-index);
   position: relative;
   flex: 1;
@@ -688,6 +689,7 @@
   font-size: calc(32 / var(--layout-width-scroll) * 100vw);
   color: var(--color-white);
   text-align: center;
+  letter-spacing: var(--tracking-normal);
   transition: color 0.3s ease;
 }
 
@@ -901,7 +903,7 @@
     inset-block-start: 0;
     inset-inline-start: calc(86 / var(--layout-width-max) * 100%);
     inline-size: calc(540 / var(--layout-width-max) * 100%);
-    block-size: 100vh;
+    block-size: calc(100vh + 86px);
   }
 
   .l-nav__inner {
@@ -910,7 +912,7 @@
     inset-inline-start: 50%;
     inline-size: max-content;
     max-block-size: 100%;
-    padding-block: calc((70/540)*100%);
+    padding-block: calc((150/540)*100%);
     translate: -50% -50%;
     overflow-y: scroll;
     scrollbar-width: none;
@@ -1012,7 +1014,7 @@
     z-index: var(--front-z-index);
     position: relative;
     inline-size: calc(450 / var(--layout-width-max) * 100%);
-    margin-block-start: 81px;
+    margin-block-start: 86px;
     margin-inline-start: calc(720 / var(--layout-width-max) * 100%);
   }
 
@@ -1101,7 +1103,7 @@
     font-size: calc((19 * 0.6) / var(--layout-width-max) * 100vw);
   }
 
-  .l-cotant__button-link-text {
+  .l-contact__button-link-text {
     font-size: calc((32 * 0.6) / var(--layout-width-max) * 100vw);
   }
 
@@ -1152,7 +1154,7 @@
     background-color: var(--background-base);
   }
 
-  .l-contact__button-link:hover .l-cotant__button-link-text {
+  .l-contact__button-link:hover .l-contact__button-link-text {
     color: var(--color-orange);
   }
 
