@@ -22,8 +22,24 @@ document.addEventListener('DOMContentLoaded', () => {
     threshold: 0.1,
   };
   const defaultObserver = new IntersectionObserver(observerCallback, defaultObserverOptions);
-  const targetElements = document.querySelectorAll('.js-fade, .js-fadeup, .js-fadein');
+  const targetElements = document.querySelectorAll('.js-scrollin');
   targetElements.forEach((target) => {
     defaultObserver.observe(target);
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) {
+        const header = document.querySelector('.l-header');
+        const headerHeight = header && window.innerWidth >= 768 ? header.offsetHeight : 0;
+        const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth',
+        });
+      }
+    });
   });
 });
