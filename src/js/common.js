@@ -1,3 +1,5 @@
+const isSP = window.matchMedia('(max-width: 767px)').matches;
+
 /* global Splide */
 const setSlider = () => {
   const splideOptions = {
@@ -19,28 +21,27 @@ const setSlider = () => {
   });
 };
 
-const isSP = window.matchMedia('(max-width: 767px)').matches;
 const setCTA = () => {
-  if (isSP) {
-    const cta = document.querySelector('.l-sticky-cta');
-    const top = document.querySelector('.l-top');
+  const cta = document.querySelector('.l-sticky-cta');
+  const top = document.querySelector('.l-top');
 
-    if (!cta || !top) {
-      return;
-    }
-    const topBottom = top.getBoundingClientRect().bottom + window.scrollY;
+  if (!cta || !top) {
+    return;
+  }
+  const topBottom = top.getBoundingClientRect().bottom + window.scrollY;
 
-    if (window.scrollY >= topBottom) {
-      cta.classList.add('l-sticky-cta--show');
-    } else {
-      cta.classList.remove('l-sticky-cta--show');
-    }
+  if (window.scrollY >= topBottom) {
+    cta.classList.add('l-sticky-cta--show');
+  } else {
+    cta.classList.remove('l-sticky-cta--show');
   }
 };
 
 document.addEventListener('DOMContentLoaded', () => {
   setSlider();
-  setCTA();
+  if (isSP) {
+    setCTA();
+  }
 });
 
 window.addEventListener('load', () => {
@@ -51,5 +52,7 @@ window.addEventListener('load', () => {
 });
 
 window.addEventListener('scroll', () => {
-  setCTA();
+  if (isSP) {
+    setCTA();
+  }
 });
