@@ -19,8 +19,9 @@ const setSlider = () => {
   });
 };
 
+const isSP = window.matchMedia('(max-width: 767px)').matches;
 const setCTA = () => {
-  if (window.matchMedia('(max-width: 767px)').matches) {
+  if (isSP) {
     const cta = document.querySelector('.l-sticky-cta');
     const top = document.querySelector('.l-top');
 
