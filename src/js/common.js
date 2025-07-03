@@ -28,9 +28,9 @@ const setCTA = () => {
   if (!cta || !top) {
     return;
   }
-  const topBottom = top.getBoundingClientRect().bottom + window.scrollY;
+  const fixPosition = top.getBoundingClientRect().top + window.scrollY;
 
-  if (window.scrollY >= topBottom) {
+  if (window.scrollY >= fixPosition) {
     cta.classList.add('l-sticky-cta--show');
   } else {
     cta.classList.remove('l-sticky-cta--show');
