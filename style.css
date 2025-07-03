@@ -939,8 +939,8 @@ summary::-webkit-details-marker {
 }
 
 .l-fa__theme-date {
+  margin-inline-start: calc((366 / 607) * 100%);
   font-size: calc(19 / var(--layout-width-scroll) * 100vw);
-  text-align: right;
 }
 
 .l-fa__theme-deco-area {
@@ -1108,7 +1108,7 @@ summary::-webkit-details-marker {
 
 /* form */
 .l-form {
-  padding-block-start: calc(140 / var(--layout-width-scroll) * 100%);
+  padding-block-start: calc(90 / var(--layout-width-scroll) * 100%);
 }
 
 /* qa */
@@ -1226,7 +1226,7 @@ summary::-webkit-details-marker {
   .l-wrapper::before {
     content: '';
     position: fixed;
-    inset-block-start: 81px;
+    inset-block-start: 86px;
     inset-inline-start: 0;
     width: 100vw;
     height: 100vh;
@@ -1426,6 +1426,10 @@ summary::-webkit-details-marker {
 
   .l-nyuin__list-text {
     font-size: calc((40 * 0.6 / var(--layout-width-max) * 100vw));
+  }
+
+  .l-nyuin__list-text-attention {
+    font-size: calc((26 * 0.6) * var(--rem-ratio));
   }
 
   .l-nyuin__attention {
