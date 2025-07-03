@@ -46,12 +46,12 @@
   }
 
   30% {
-    opacity: 0.5;
-    filter: blur(2px);
+    opacity: 1;
   }
 
   60% {
-    opacity: 0.4;
+    opacity: 0.9;
+    filter: blur(2px);
   }
 
   90% {
