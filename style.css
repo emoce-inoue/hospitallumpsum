@@ -255,12 +255,12 @@ summary::-webkit-details-marker {
   }
 
   30% {
-    opacity: 0.5;
-    filter: blur(2px);
+    opacity: 1;
   }
 
   60% {
-    opacity: 0.4;
+    opacity: 0.9;
+    filter: blur(2px);
   }
 
   90% {
@@ -1027,7 +1027,6 @@ summary::-webkit-details-marker {
   inset-inline-start: calc(611 / var(--layout-width-scroll) * 100%);
   inline-size: calc(63 / var(--layout-width-scroll) * 100%);
   margin-block-start: calc(103 / var(--layout-width-scroll) * 100%);
-  animation-delay: 1s;
 }
 
 .l-contact__heading {
@@ -1092,6 +1091,7 @@ summary::-webkit-details-marker {
   inset-inline-start: 0;
   inline-size: calc((128 / 634) * 100%);
   margin-block-start: calc((-86 / 634) * 100%);
+  opacity: 0;
 }
 
 .l-contact__button.is-inview .l-contact__button-link-timer {
@@ -1106,9 +1106,14 @@ summary::-webkit-details-marker {
   margin-inline-start: auto;
 }
 
+/* form */
+.l-form {
+  padding-block-start: calc(140 / var(--layout-width-scroll) * 100%);
+}
+
 /* qa */
 .l-qa {
-  margin-block-start: calc(127 / var(--layout-width-scroll) * 100%);
+  margin-block-start: calc(54 / var(--layout-width-scroll) * 100%);
 }
 
 .l-qa__list {
@@ -1289,7 +1294,7 @@ summary::-webkit-details-marker {
     inset-inline-start: 50%;
     inline-size: max-content;
     max-block-size: 100%;
-    padding-block: calc((150/540)*100%);
+    padding-block: calc((150 / 540) * 100%);
     translate: -50% -50%;
     overflow-y: scroll;
     scrollbar-width: none;
@@ -1338,7 +1343,7 @@ summary::-webkit-details-marker {
 
   .l-nav__button {
     --aspect-nav: 540/81;
-    
+
     position: relative;
     aspect-ratio: var(--aspect-nav);
     margin-block-start: calc((98 / 540) * 100%);
@@ -1357,7 +1362,7 @@ summary::-webkit-details-marker {
 
   .l-nav__button-text {
     font-weight: var(--font-bold);
-    font-size: min(calc(27/var(--layout-width-max)*100vw), calc(27*var(--rem-ratio)));
+    font-size: min(calc(27 / var(--layout-width-max) * 100vw), calc(27 * var(--rem-ratio)));
     color: var(--color-white);
     letter-spacing: var(--tracking-normal);
     transition: color 0.3s ease;
