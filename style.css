@@ -37,6 +37,7 @@
   --rounded-m: 8px;
   --rounded-sl: 10px;
   --rounded-32: 16px;
+  --rounded-28: 14px;
   --rounded-l: 30px;
   --rounded-50: 50px;
 
@@ -401,13 +402,15 @@ summary::-webkit-details-marker {
 
 /* sticky cta */
 .l-sticky-cta {
+  --aspect-sticky-button: 635/124;
+
   z-index: var(--menu-z-index);
   position: fixed;
   inset-block-end: 0;
   inset-inline-start: 50%;
-  inline-size: calc(634 / var(--layout-width-scroll) * 100%);
-  aspect-ratio: var(--aspect-button);
-  margin-block-end: calc(20 / var(--layout-width-scroll) * 100%);
+  inline-size: calc(635 / var(--layout-width-scroll) * 100%);
+  aspect-ratio: var(--aspect-sticky-button);
+  margin-block-end: calc(50 / var(--layout-width-scroll) * 100%);
   background-color: var(--color-orange);
   border-radius: var(--rounded-50);
   translate: -50% 15px;
@@ -435,7 +438,7 @@ summary::-webkit-details-marker {
 
 .l-sticky-cta__link-text {
   font-weight: var(--font-bold);
-  font-size: calc(32 / var(--layout-width-scroll) * 100vw);
+  font-size: calc(38 / var(--layout-width-scroll) * 100vw);
   letter-spacing: var(--tracking-normal);
   color: var(--color-white);
 }
@@ -443,8 +446,8 @@ summary::-webkit-details-marker {
 .l-sticky-cta__link-arrow {
   position: absolute;
   inset-block-start: 50%;
-  inset-inline-end: calc((52 / 634) * 100%);
-  inline-size: calc((19 / 634) * 100%);
+  inset-inline-end: calc((52 / 635) * 100%);
+  inline-size: calc((19 / 635) * 100%);
   translate: 0 -50%;
 }
 
@@ -753,7 +756,7 @@ summary::-webkit-details-marker {
   align-items: center;
   aspect-ratio: var(--aspect-nyuin);
   border: 5px solid var(--nyuin-frame);
-  border-radius: var(--rounded-m);
+  border-radius: var(--rounded-28);
 }
 
 .l-nyuin__list-item + .l-nyuin__list-item {
@@ -776,19 +779,19 @@ summary::-webkit-details-marker {
 }
 
 .l-nyuin__list-text {
-  margin-block-start: calc((12 / 650) * 100%);
-  font-weight: var(--font-bold);
-  font-size: calc(40 / var(--layout-width-scroll) * 100vw);
-  line-height: var(--leading-tight);
-  text-align: center;
+  margin: calc((27 / 650) * 100%) auto 0;
 }
 
-.l-nyuin__list-text-strong {
-  color: var(--color-blue);
+.l-nyuin__list-text--money {
+  inline-size: calc((535 / 650) * 100%);
 }
 
-.l-nyuin__list-text-attention {
-  font-size: calc(10 * var(--rem-ratio));
+.l-nyuin__list-text--heart {
+  inline-size: calc((418 / 650) * 100%);
+}
+
+.l-nyuin__list-text--hospital {
+  inline-size: calc((422 / 650) * 100%);
 }
 
 .l-nyuin__attention {
